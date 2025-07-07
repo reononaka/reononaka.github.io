@@ -1,68 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Research - Reo Nonaka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      line-height: 1.6;
-      max-width: 720px;
-      margin: 4em auto;
-      padding: 0 1.5em;
-    }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
 
-    nav {
-      text-align: center;
-      margin-bottom: 2em;
-    }
+header {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1.5em 1em;
+  text-align: center;
+  background-color: #fff;
+}
 
-    nav a {
-      color: #0366d6;
-      text-decoration: none;
-      margin: 0 1em;
-      font-weight: 500;
-    }
+header nav a {
+  margin: 0 1.2em;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  font-size: 1rem;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+header nav a:hover {
+  color: #0366d6;
+  text-decoration: underline;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 2em;
-    }
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 3em auto;
+  padding: 0 1.5em;
+  flex-wrap: wrap;
+}
 
-    @media (max-width: 600px) {
-      body {
-        padding: 0 1em;
-      }
-      nav a {
-        display: block;
-        margin: 0.5em 0;
-      }
-    }
+.sidebar {
+  flex: 1 1 250px;
+  padding-right: 2em;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.main {
+  flex: 2 1 600px;
+  min-width: 300px;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1.5em;
+}
+
+h1 {
+  font-size: 1.6em;
+  margin: 0.5em 0;
+  text-align: center;
+  color: #222;
+}
+
+.sidebar p, .sidebar a {
+  text-align: center;
+  display: block;
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.sidebar a:hover {
+  color: #0366d6;
+}
+
+.main h2 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.2em;
+  color: #333;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    padding-right: 0;
+    margin-bottom: 2em;
+  }
+}
+
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="research.html">Research</a>
-  </nav>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+  </header>
 
-  <h1>Research</h1>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Reo Nonaka profile photo" class="profile-img">
+      <h1>Reo Nonaka</h1>
+      <p>Ph.D. student at Yale University</p>
+      <p><a href="mailto:you@example.com">Email</a></p>
+      <p><a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a></p>
+      <p><a href="cv.pdf" target="_blank">CV</a></p>
+    </aside>
 
-  <p>My research interests include the following areas:</p>
-  <ul>
-    <li>Mechanism Design</li>
-    <li>Multidimensional Screening</li>
-    <li>Epistemic Foundations of Economics</li>
-    <li>Market Design and Social Welfare</li>
-  </ul>
+    <main class="main">
+      <h2>Research</h2>
+      <p>My research interests include the following areas:</p>
+      <ul>
+        <li>Mechanism Design</li>
+        <li>Multidimensional Screening</li>
+        <li>Epistemic Foundations of Economics</li>
+        <li>Market Design and Social Welfare</li>
+      </ul>
 
-  <p>I am currently exploring how informational assumptions affect strategic interaction and resource allocation.</p>
+      <h2>Selected Paper</h2>
+      <p>
+        <strong>Selling Multiple Items to a Unit-Demand Buyer via Automated Mechanism Design</strong><br>
+        Kento Hashimoto, Keita Kuwahara, and Reo Nonaka<br>
+        <em>arXiv preprint arXiv:2502.10086</em> (2025)<br>
+        <a href="https://arxiv.org/pdf/2502.10086" target="_blank">PDF</a>
+      </p>
+    </main>
+  </div>
 </body>
 </html>
